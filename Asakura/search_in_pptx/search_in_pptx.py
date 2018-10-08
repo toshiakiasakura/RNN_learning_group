@@ -102,9 +102,8 @@ def search_word():
 			page= []
 			for text in string_summary.split("__5960__")[1:]:
 				if text.find(search_word) > -1:
-					if index > 0 :
-						fn = text.find("__3__")
-						page.append( int(text[:fn]) ) 
+					fn = text.find("__3__")
+					page.append( int(text[:fn]) ) 
 			page.sort()
 			print(str(index) + " : " + path2access + " ; "+"page : " + str( page) )
 			index = index + 1
