@@ -73,8 +73,13 @@ def preparation():
 				"search/" + file_name]
 				subprocess.check_call(mv_com)
 				mk_word_file("search/" + file_name,path2access)
+				path_2 = "search/" + file_name + "/"
+				# if you wnat to save pptx file, comment out code beow.
+				rm_com = ["rm","-rf",path_2 + "_rels",path_2 +  "ppt", 
+					path_2 + "docProps", path_2 + "[Content_Types].xml" ]
+				subprocess.check_call(rm_com)
 			except:
-				dummy = 1
+				print("error")
 		else:
 			print("exist")
 	exit()
